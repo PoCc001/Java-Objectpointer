@@ -3,13 +3,14 @@ package objptr;
 /**
  * This class can be used to enable calling by reference.
  * 
- * Unfortunately, getting the actual place of the pointer in memory is not possible.
+ * Unfortunately, getting the actual address of the pointer in memory is not possible.
  * 
- * @author Johannes Kloimböck
+ * @author Johannes KloimbÃ¶ck
  *
  * @param <T>
  */
 public class ObjectPointer<T> {
+	// the "pointer" is actually an array with one element
 	private Object ptr [] = new Object [1];
 	
 	/**
@@ -28,7 +29,7 @@ public class ObjectPointer<T> {
 	}
 	
 	/**
-	 * 
+	 * Get the object from the ObjectPointer.
 	 * @return the object to use it separatly from the ObjectPointer
 	 */
 	@SuppressWarnings("unchecked")
@@ -37,7 +38,7 @@ public class ObjectPointer<T> {
 	}
 	
 	/**
-	 * Overwrite the current object the ObjectPointer is pointing to with another one.
+	 * Modify the current object the ObjectPointer is pointing to.
 	 * @param newObj is the new object that replaces the old one
 	 */
 	public void setObject (T newObj) {
