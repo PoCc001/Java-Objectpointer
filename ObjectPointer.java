@@ -7,7 +7,7 @@ package objptr;
  * 
  * @author Johannes Kloimböck
  *
- * @param <T>
+ * @param <T> the type of the object (e.g. Integer, List)
  */
 public class ObjectPointer<T> {
 	// the "pointer" is actually an array with one element
